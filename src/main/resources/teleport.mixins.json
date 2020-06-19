@@ -1,11 +1,12 @@
 {
   "required": true,
-  "package": "io.github.minecraftcursedlegacy.example.mixin",
+  "package": "tk.valoeghese.teleport.mixin",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
+  	"MixinItemInstance",
+  	"MixinOre"
   ],
   "client": [
-    "ExampleMixin"
   ],
   "injectors": {
     "defaultRequire": 1
