@@ -17,6 +17,9 @@ public class TeleporterMod implements ModInitializer {
 		// teleporter
 		teleporter = Registries.TILE.register(new Id("illustrious_gateways", "teleporter"), Teleporter::new);
 
+		// items
+		TeleportItems.addItems();
+
 		Recipes.addShapelessRecipe(new ItemInstance(TeleportItems.seekingStone), new ItemInstance(ItemType.dyePowder, 1, 4), TeleportItems.lodestone, Tile.REDSTONE_DUST);
 		// temporary: see below
 		Recipes.addShapelessRecipe(new ItemInstance(TeleportItems.seekingGem), TeleportItems.seekingStone);
