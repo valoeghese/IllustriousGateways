@@ -12,6 +12,7 @@ public class SeekingGem extends ItemType {
 		super(id);
 
 		this.setName("seekingStone");
+		this.setMaxStackSize(1);
 		this.setDurability(70);
 	}
 
