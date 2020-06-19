@@ -1,4 +1,4 @@
-package tk.valoeghese.teleport;
+package tk.valoeghese.teleport.item;
 
 import net.minecraft.item.ItemType;
 

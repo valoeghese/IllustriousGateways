@@ -10,7 +10,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 import net.minecraft.tile.Ore;
 import net.minecraft.tile.Tile;
 import net.minecraft.tile.material.Material;
-import tk.valoeghese.teleport.Mod;
+import tk.valoeghese.teleport.item.TeleportItems;
 
 @Mixin(Ore.class)
 public abstract class MixinOre extends Tile {
@@ -22,7 +22,7 @@ public abstract class MixinOre extends Tile {
 	private void addLodestones(int meta, Random rand, CallbackInfoReturnable<Integer> info) {
 		if (this.id == Tile.IRON_ORE.id) {
 			if (rand.nextInt(22) == 0) {
-				info.setReturnValue(Mod.lodestone.id);
+				info.setReturnValue(TeleportItems.lodestone.id);
 			}
 		}
 	}

@@ -9,7 +9,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 import net.minecraft.item.ItemInstance;
 import net.minecraft.util.io.CompoundTag;
 import net.minecraft.util.maths.TilePos;
-import tk.valoeghese.teleport.SeekingItem;
+import tk.valoeghese.teleport.item.SeekingItem;
 
 @Mixin(ItemInstance.class)
 public abstract class MixinItemInstance implements SeekingItem {

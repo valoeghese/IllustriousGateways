@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "illustrious_gateways",
-  "version": "${version}",
+  "version": "0.1.0",
 
   "name": "Illustrious Gateways",
   "description": "Teleporters in beta 1.7.3",
@@ -19,7 +19,7 @@
   "environment": "*",
   "entrypoints": {
     "init": [
-      "tk.valoeghese.teleport.Mod"
+      "tk.valoeghese.teleport.TeleporterMod"
     ]
   },
   "mixins": [

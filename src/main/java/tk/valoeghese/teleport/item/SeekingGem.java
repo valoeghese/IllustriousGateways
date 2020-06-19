@@ -1,10 +1,11 @@
-package tk.valoeghese.teleport;
+package tk.valoeghese.teleport.item;
 
 import net.minecraft.entity.player.Player;
 import net.minecraft.item.ItemInstance;
 import net.minecraft.item.ItemType;
 import net.minecraft.level.Level;
 import net.minecraft.util.maths.TilePos;
+import tk.valoeghese.teleport.TeleporterMod;
 
 public class SeekingGem extends ItemType {
 	public SeekingGem(int id) {
@@ -16,7 +17,7 @@ public class SeekingGem extends ItemType {
 
 	@Override
 	public boolean useOnTile(ItemInstance item, Player player, Level level, int x, int y, int z, int facing) {
-		if (level.getTileId(x, y, z) == Mod.teleporter.id) {
+		if (level.getTileId(x, y, z) == TeleporterMod.teleporter.id) {
 			((SeekingItem) (Object) item).setSeekingPos(x, y, z);
 			item.applyDamage(1, player);
 			return true;
@@ -35,7 +36,7 @@ public class SeekingGem extends ItemType {
 			int y = pos.y;
 			int z = pos.z;
 
-			if (level.getTileId(x, y, z) == Mod.teleporter.id) {
+			if (level.getTileId(x, y, z) == TeleporterMod.teleporter.id) {
 				if (y >= 127 || level.getTileId(x, y + 1, z) == 0) {
 					if (y >= 126 || level.getTileId(x, y + 2, z) == 0) {
 						item.applyDamage(2, player);
