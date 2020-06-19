@@ -1,36 +1,33 @@
 {
   "schemaVersion": 1,
-  "id": "modid",
+  "id": "teleport",
   "version": "${version}",
 
-  "name": "Example Mod",
-  "description": "This is an example description! Tell everyone what your mod is about!",
+  "name": "Illustrious Gateways",
+  "description": "Teleporters in beta 1.7.3",
   "authors": [
-    "Me!"
+    "Valoeghese"
   ],
   "contact": {
-    "issues": "https://github.com/minecraft-cursed-legacy/Example-Mod/issues",
-    "sources": "https://github.com/minecraft-cursed-legacy/Example-Mod"
+    "issues": "https://github.com/Valoeghese/IllustriousGateways/issues",
+    "sources": "https://github.com/Valoeghese/IllustriousGateways"
   },
 
-  "license": "CC0-1.0",
-  "icon": "assets/modid/icon.png",
+  "license": "MIT",
+  "icon": "assets/teleport/icon.png",
 
   "environment": "*",
   "entrypoints": {
     "init": [
-      "io.github.minecraftcursedlegacy.example.ExampleMod"
+      "tk.valoeghese.teleport.Mod"
     ]
   },
   "mixins": [
-    "modid.mixins.json"
+    "teleport.mixins.json"
   ],
 
   "depends": {
     "fabricloader": "*",
     "minecraft": "1.0.0-beta.7.3"
-  },
-  "suggests": {
-    "flamingo": "*"
   }
 }
