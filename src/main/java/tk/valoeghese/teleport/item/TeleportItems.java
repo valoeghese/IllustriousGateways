@@ -15,6 +15,13 @@ import paulevs.corelib.registry.ModelRegistry;
 import paulevs.corelib.texture.Texture2D;
 import tk.valoeghese.teleport.TeleporterMod;
 
+// 
+// DISCLAIMER
+// If you are referencing this and want to do textures
+// Use the old item texture atlas api
+// I'm in the middle of making it use corelib and this is stupidly difficult
+// Might end up undeprecating the item texture atlas api in cursed legacy at this rate
+//
 public class TeleportItems {
 	public static void addItems() {
 		teleporterItem = (PlaceableTileItem) TileItems.registerTileItem(new Id("illustrious_gateways", "teleporter"), TeleporterMod.teleporter);
@@ -25,7 +32,8 @@ public class TeleportItems {
 		seekingStone = createItem("seeking_stone", 0, 1, BasicItem::new);
 		seekingStone.setName("seekingStone");
 		Translations.addItemTranslation(seekingStone, "Seeking Stone");
-		ModelRegistry.addItemModel(seekingStone, Model);
+
+		//ModelRegistry.addItemModel(seekingStone, Model);
 
 		seekingGem = createItem("seeking_gem", 1, 1, SeekingGem::new);
 		seekingGem.setName("seekingGem");

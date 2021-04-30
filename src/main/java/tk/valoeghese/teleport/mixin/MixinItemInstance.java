@@ -11,6 +11,7 @@ import net.minecraft.util.io.CompoundTag;
 import net.minecraft.util.maths.TilePos;
 import tk.valoeghese.teleport.item.SeekingItem;
 
+// TODO remove this, use Attached Data
 @Mixin(ItemInstance.class)
 public abstract class MixinItemInstance implements SeekingItem {
 	private int teleport_x = 0;
