@@ -7,12 +7,9 @@ public class Teleporter extends Tile {
 	Teleporter(int id) {
 		super(id, Material.METAL);
 		this.sounds(Tile.GLASS_SOUNDS);
-		this.setName("teleporter");
-		this.setHardness(Tile.PISTON.getHardness());
-		this.method_1577(0.8F); // lightness
-
-		// this is probably cutout render layer so no
-		// this.method_1591();
+		this.name("teleporter");
+		this.hardness(Tile.PISTON.getHardness());
+		this.luminance(0.8F); // lightness
 	}
 
 	public int getTextureForSide(int side) {

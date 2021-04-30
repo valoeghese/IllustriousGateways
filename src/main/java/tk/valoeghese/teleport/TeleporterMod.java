@@ -6,6 +6,7 @@ import io.github.minecraftcursedlegacy.api.registry.Registries;
 import net.fabricmc.api.ModInitializer;
 import net.minecraft.item.ItemInstance;
 import net.minecraft.item.ItemType;
+import net.minecraft.recipe.SmeltingRecipeRegistry;
 import net.minecraft.tile.Tile;
 import tk.valoeghese.teleport.item.TeleportItems;
 
@@ -20,15 +21,15 @@ public class TeleporterMod implements ModInitializer {
 		// items
 		TeleportItems.addItems();
 
+		Recipes.addShapelessRecipe(new ItemInstance(teleporter), Tile.DIRT);
+		Recipes.addShapelessRecipe(new ItemInstance(TeleportItems.seekingStone), Tile.SAND);
+
 		Recipes.addShapelessRecipe(new ItemInstance(TeleportItems.seekingStone), new ItemInstance(ItemType.dyePowder, 1, 4), TeleportItems.lodestone, Tile.REDSTONE_DUST);
-		// temporary: see below
-		Recipes.addShapelessRecipe(new ItemInstance(TeleportItems.seekingGem), TeleportItems.seekingStone);
 
 		// Tile.WOOD = planks
-		Recipes.addShapedRecipe(new ItemInstance(teleporter), "XXX", "CDC", "CGC", 'X', Tile.WOOD, 'C', Tile.STONEBRICK, 'D', ItemType.diamond, 'G', TeleportItems.seekingStone);
+		Recipes.addShapedRecipe(new ItemInstance(teleporter), "XXX", "CDC", "CGC", 'X', Tile.WOOD, 'C', Tile.COBBLESTONE, 'D', ItemType.diamond, 'G', TeleportItems.seekingStone);
 
-		// TODO remap smelting recipes so this can work
-		// SmeltingRecipeRegistry.getInstance().addSmeltingRecipe(, output);
+		SmeltingRecipeRegistry.getInstance().addSmeltingRecipe(TeleportItems.seekingStone.id, new ItemInstance(TeleportItems.seekingGem));
 	}
 
 	public static Tile teleporter;

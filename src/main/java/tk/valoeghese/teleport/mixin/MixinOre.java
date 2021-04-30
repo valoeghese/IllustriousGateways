@@ -7,12 +7,12 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
-import net.minecraft.tile.Ore;
+import net.minecraft.tile.OreTile;
 import net.minecraft.tile.Tile;
 import net.minecraft.tile.material.Material;
 import tk.valoeghese.teleport.item.TeleportItems;
 
-@Mixin(Ore.class)
+@Mixin(OreTile.class)
 public abstract class MixinOre extends Tile {
 	protected MixinOre(int id, int tex, Material material) {
 		super(id, tex, material);
